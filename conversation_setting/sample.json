@@ -1,0 +1,57 @@
+{
+    "num_sessions": 3,
+    "agents": ["Alice", "Bob"],
+    "sessions":[
+        {
+            "location":"house",
+            "time":"morning",
+            "description":"Bob is lying on the couch, holding his stomach, looking pale and in pain. Alice arrives with a worried expression.",
+            "trajectory":[  
+                {"agent":"Alice", "action":"Speak", "args":"Hey Bob, how are you holding up?"},
+                {"agent":"Bob", "action":"Speak", "args":"Not great, Alice. My stomach is killing me."},
+                {"agent":"Alice", "action":"Speak", "args":"That's too bad. How can I help you?"},
+                {"agent":"Bob", "action":"Speak", "args":"Can you please go get some medicine? It should be somewhere in the house."},
+                {"agent":"Alice", "action":"Speak", "args":"Alright. I'll be right back."},
+                {"agent":"Alice", "action":"Find", "args":"Medicine"},
+                {"agent":"Alice", "action":"Carry", "args":"Medicine, Bob"},
+                {"agent":"Alice", "action":"Speak", "args":"Here you are, take this."},
+                {"agent":"Bob", "action":"Speak", "args":"Thanks, Alice."},
+                {"agent":"Bob", "action":"Interact", "args":"Medicine"},
+                {"agent":"Alice", "action":"Speak", "args":"After taking the medicine, I think we should go to the hospital. It might be something serious."},
+                {"agent":"Bob", "action":"Speak", "args":"I think you're right. Let's go to the hospital."}
+            ]
+        },
+        {
+            "location":"hospital",
+            "time":"afternoon",
+            "description":"Bob and Alice are sitting in the hospital bench, having just left the doctor's office. Bob looks slightly better but still uncomfortable.",
+            "trajectory":[
+                {"agent":"Alice", "action":"Speak", "args":"So, what did the doctor say exactly?"},
+                {"agent":"Bob", "action":"Speak", "args":"Well, it turns out I just overdid it at the barbecue yesterday. Ate way too much, especially all that spicy food."},
+                {"agent":"Alice", "action":"Speak", "args":"Oh, thank goodness. I was worried it might be something serious."},
+                {"agent":"Bob", "action":"Speak", "args":"Yeah, me too. The doctor said to take the medicine and stick to a light diet for the next day or two."},
+                {"agent":"Alice", "action":"Speak", "args":"That sounds manageable. Alright, let's get you home and comfortable. Maybe a nice, bland soup for dinner?"},
+                {"agent":"Bob", "action":"Speak", "args":"Sounds perfect. Lead the way."}
+            ]
+        },
+        {
+            "location":"house",
+            "time":"dinner",
+            "description":"They arrived at Bob's house.",
+            "trajectory":[  
+                {"agent":"Bob", "action":"Speak", "args":"Alice, I really can't thank you enough for today. You were a lifesaver."},
+                {"agent":"Alice", "action":"Speak", "args":"Oh, don't mention it. What are friends for? By the way, it is getting darker now."},
+                {"agent":"Bob", "action":"Speak", "args":"Yeah, we should turn on the lights."},
+                {"agent":"Bob", "action":"Goto", "args":"Switch"},
+                {"agent":"Bob", "action":"Interact", "args":"Switch"},
+                {"agent":"Alice", "action":"Speak", "args":"Bob, you should take the medicine now."},
+                {"agent":"Bob", "action":"Speak", "args":"Oh, thanks for reminding."},
+                {"agent":"Bob", "action":"Goto", "args":"Medicine"},
+                {"agent":"Bob", "action":"Interact", "args":"Medicine"},
+                {"agent":"Bob", "action":"Speak", "args":"Let's have dinner now. I will make a delicious soup for you, Alice."},
+                {"agent":"Alice", "action":"Speak", "args":"Sounds great! But don't ever put the pepper in the soup, Bob."},
+                {"agent":"Bob", "action":"Speak", "args":"Of course."}
+            ]
+        }
+    ]
+}
